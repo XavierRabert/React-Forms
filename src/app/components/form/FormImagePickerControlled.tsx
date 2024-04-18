@@ -20,7 +20,6 @@ const FormImagePickerControlled: React.FC<imagePickerFormProps> = ({
   const handleImageChange = React.useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files ? e.target.files[0] : null;
-      console.log(file);
 
       if (file) {
         const reader = new FileReader();
@@ -40,7 +39,7 @@ const FormImagePickerControlled: React.FC<imagePickerFormProps> = ({
       name={name}
       render={() => {
         return (
-          <div className="flex gap-2 items-end">
+          <div className="flex flex-col gap-2 items-start">
             <input
               accept="image/*"
               type="file"

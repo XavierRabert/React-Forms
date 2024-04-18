@@ -20,10 +20,11 @@ const FormInputControlled: React.FC<inputFormProps> = ({
           <Input
             type={type}
             label={label}
-            className="w-72"
+            // className="w-72"
             isInvalid={!!error?.message}
             errorMessage={error?.message}
             value={value}
+            color="primary"
             onChange={(e) => onChange(e)}
           />
         );
